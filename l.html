@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <script src="./angular.min.js"></script>
+    <script src="./l.js"></script>
+</head>
+<body ng-app="lApp" ng-controller="Cntrl">
+    <h1>Love Calculator</h1>
+    <h3>Enter the Name's</h3>
+    <input ng-model="mName" placeholder="Male Name"> <br>
+    <input ng-model="fName"  placeholder="Female Name"><br>
+    Submit:<input type="checkbox" ng-click="get()" ng-model="checked"><br/>
+
+    <!-- <button ng-click="get()">Submit</button> -->
+    
+    <h3>Result:</h3>
+        <div ng-show="checked">
+        Boy Friend Name: {{result["first name: "]}} <br>
+        Girl Friend Name: {{result["second name: "]}} <br>
+        Love Percentage: {{result["percentage match: "]}}
+        <h3>{{result["result: "]}}</h3>  
+    </div>
+</body>
+</html>
